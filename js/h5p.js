@@ -384,6 +384,11 @@ H5P.getHeadTags = function (contentId) {
     }
     return tags;
   };
+  
+   // --- Support Mathjax in H5P
+  H5PIntegration.core.scripts.push("https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"); 
+  H5PIntegration.core.scripts.push(H5PIntegration.baseUrl + "mod/hvp/library/js/mathjax.js"); 
+  // ---
 
   return '<base target="_parent">' +
          createStyleTags(H5PIntegration.core.styles) +
